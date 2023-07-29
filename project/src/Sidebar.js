@@ -42,7 +42,7 @@ function Sidebar() {
     <div className="sidebar">
       {/* Sidebar content */}
       <div className="sidebar__top">
-        <h3>Fichat</h3>
+        <h3>Chatverse</h3>
         <ExpandMoreIcon />
       </div>
       <div className="sidebar__channels">
