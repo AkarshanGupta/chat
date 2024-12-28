@@ -105,6 +105,7 @@ docker run -p 3000:3000 chatverse-app
 ```
 http://localhost:3000
 ```
+- If the docker is not able to run just installl docker desktop for your respective OS.
 
 
 
