@@ -75,6 +75,37 @@ EXPOSE 3000
 
 # Start the React app
 CMD ["npm", "start"]
+```
+
+# React App in Docker - Troubleshooting and Improvements
+
+## Additional Steps to Troubleshoot and Improve
+
+### Ensure React App Listens on 0.0.0.0
+By default, React binds to `localhost`, making it inaccessible from outside the container. Update your start script in `package.json`:
+
+```json
+"scripts": {
+  "start": "react-scripts start --host 0.0.0.0"
+}
+```
+
+## Build the Docker Image
+- Run the following command to build the Docker image:
+```
+docker build -t chatverse-app .
+```
+## Run the Docker Container
+- Run the following command to start the container and map it to port 3000 on your host:
+```
+docker run -p 3000:3000 chatverse-app
+```
+## Access the Application
+- Once the container is running, you can access the application in your browser at:
+```
+http://localhost:3000
+```
+
 
 
 
